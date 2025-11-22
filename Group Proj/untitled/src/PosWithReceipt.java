@@ -1,4 +1,3 @@
-// PosWithReceipt.java
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -141,7 +140,6 @@ public class PosWithReceipt {
             return;
         }
 
-        // Open payment dialog
         PaymentDialog payDlg = new PaymentDialog(frame, subtotal);
         payDlg.setVisible(true);
 
@@ -379,4 +377,5 @@ public class PosWithReceipt {
         BigDecimal getChange() { return change; }
     }
 }
+
 
