@@ -15,7 +15,7 @@ public class ReceiptWindow extends JFrame {
         area.setFont(new Font("Monospaced", Font.PLAIN, 12));
 
         StringBuilder sb = new StringBuilder();
-        sb.append("       SIMPLE STORE\n");
+        sb.append("       SuperMarket Bros\n");
         sb.append("       SALES RECEIPT\n\n");
         sb.append("----------------------------------------\n");
 
@@ -44,3 +44,4 @@ public class ReceiptWindow extends JFrame {
         setVisible(true);
     }
 }
+
