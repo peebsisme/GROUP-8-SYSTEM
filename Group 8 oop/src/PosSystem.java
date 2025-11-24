@@ -26,7 +26,7 @@ public class PosSystem {
         JButton checkoutBtn = new JButton("Checkout");
         bottom.add(subtotalLabel);
         bottom.add(checkoutBtn);
-        checkoutBtn.setBackground(new Color(0, 153, 51)); // green
+        checkoutBtn.setBackground(new Color(0, 153, 51));
         checkoutBtn.setForeground(Color.WHITE);
         checkoutBtn.setFocusPainted(false);
         checkoutBtn.setPreferredSize(new Dimension(120, 40));

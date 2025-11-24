@@ -16,26 +16,22 @@ public class CartTablePanel extends JPanel {
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createTitledBorder("Cart"));
 
-        // Panel Background
-        setBackground(new Color(255, 240, 245)); // soft pink
+        setBackground(new Color(255, 240, 245));
 
         String[] cols = {"Item", "Qty", "Price", "Total"};
         model = new DefaultTableModel(cols, 0);
         table = new JTable(model);
 
-        // Table Background
         table.setBackground(Color.WHITE);
         table.setGridColor(new Color(220, 220, 220));
         table.setRowHeight(28);
 
-        // Center alignment for columns
         DefaultTableCellRenderer centerRender = new DefaultTableCellRenderer();
         centerRender.setHorizontalAlignment(SwingConstants.CENTER);
         table.getColumnModel().getColumn(1).setCellRenderer(centerRender);
         table.getColumnModel().getColumn(2).setCellRenderer(centerRender);
         table.getColumnModel().getColumn(3).setCellRenderer(centerRender);
 
-        // Header style
         JTableHeader header = table.getTableHeader();
         header.setBackground(new Color(255, 200, 200));
         header.setForeground(Color.BLACK);
@@ -43,7 +39,6 @@ public class CartTablePanel extends JPanel {
 
         add(new JScrollPane(table), BorderLayout.CENTER);
 
-        // Remove Button
         removeButton = new JButton("Remove Selected");
         removeButton.setBackground(new Color(255, 150, 150));
         removeButton.setForeground(Color.WHITE);
@@ -55,7 +50,7 @@ public class CartTablePanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 int[] selectedRows = table.getSelectedRows();
                 if (selectedRows.length > 0) {
-                    // Remove rows starting from the end to avoid index issues
+
                     for (int i = selectedRows.length - 1; i >= 0; i--) {
                         model.removeRow(selectedRows[i]);
                     }
